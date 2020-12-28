@@ -165,16 +165,22 @@ public class MainPlayerScripts : MonoBehaviour
         { 
             while(weapons[selectedWep].currentCD <= 0)
             {
-                weapons[selectedWep].currentCD += Mathf.Max(1/weapons[selectedWep].RPS, 0.001f); //10k per second cap
+                weapons[selectedWep].currentCD += Mathf.Max(1/weapons[selectedWep].RPS, 0.001f); //10k per second cap ||| or 1k?
                 GameObject shot = Instantiate(weapons[selectedWep].bullet, weapons[selectedWep].bullet.transform.position, weapons[selectedWep].bullet.transform.rotation);
                 float shotAngle = player.transform.localEulerAngles.y; //ehh....
                 RaycastHit hit;
                 shot.transform.localEulerAngles = new Vector3(shot.transform.localEulerAngles.x, shotAngle, shot.transform.localEulerAngles.z);
-                if (Physics.Raycast(weapons[selectedWep].gunpoint.position, player.transform.TransformDirection(Vector3.forward), out hit, weapons[selectedWep].range))
+                Ray ray = new Ray(weapons[selectedWep].gunpoint.position, player.transform.TransformDirection(Vector3.forward));
+                if (Physics.Raycast(ray, out hit, weapons[selectedWep].range))
                 {
                     shot.transform.position = weapons[selectedWep].gunpoint.position;
                     shot.GetComponent<Timeout>().SetBulletScale(hit.distance);
                         Debug.Log("Found an object - distance: " + hit.distance);
+
+                    if(hit.collider.tag == "Zombie")
+                    {
+                        hit.collider.gameObject.GetComponent<NormalZombie>().Health(weapons[selectedWep].damage);
+                    }
                 }
                 else
                 {

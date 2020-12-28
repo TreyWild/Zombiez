@@ -27,9 +27,16 @@ public class NormalZombie : MonoBehaviour
 
     private Rigidbody self;
 
+    private MainPlayerScripts MainPlayerScripts;
+    public GameObject player;
+
     private void Start()
     {
+
         self = gameObject.GetComponent<Rigidbody>();
+
+        player = GameObject.FindWithTag("Player");
+        MainPlayerScripts = player.GetComponent<MainPlayerScripts>();
     }
 
     void Update()
@@ -69,7 +76,7 @@ public class NormalZombie : MonoBehaviour
     bool DistShorter(Rigidbody targ)
     {
         float targSqrDist = Vector3.SqrMagnitude(targ.transform.position - self.transform.position);
-        return (target == null || target == targ|| targSqrDist <= Vector3.SqrMagnitude(target.transform.position - self.transform.position)) && targSqrDist <= scanRange*scanRange;
+        return (target == null || target == targ || targSqrDist <= Vector3.SqrMagnitude(target.transform.position - self.transform.position)) && targSqrDist <= scanRange*scanRange;
     }
 
     void MoveTowardsTarget()
@@ -131,5 +138,15 @@ public class NormalZombie : MonoBehaviour
     public void Hit(float damage, float knockback)
     {
         //didn't get around to it yet
+    }
+
+    public void Health(float damage)
+    {
+        currentHP -= damage;
+
+        if(currentHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

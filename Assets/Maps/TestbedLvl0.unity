@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 349435428}
   m_Layer: 0
   m_Name: NormalZombie (8)
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1217,6 +1217,7 @@ MonoBehaviour:
   currentHP: 100
   team:
   - Untagged
+  - Zombie
   target: {fileID: 0}
 --- !u!54 &349435430
 Rigidbody:
@@ -1310,7 +1311,7 @@ Transform:
   - {fileID: 213678879}
   - {fileID: 654864115}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &375748701
 GameObject:
@@ -1586,7 +1587,7 @@ GameObject:
   - component: {fileID: 464725235}
   m_Layer: 0
   m_Name: NormalZombie (7)
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1722,6 +1723,7 @@ MonoBehaviour:
   currentHP: 100
   team:
   - Untagged
+  - Zombie
   target: {fileID: 0}
 --- !u!54 &464725237
 Rigidbody:
@@ -1815,7 +1817,7 @@ Transform:
   - {fileID: 2121193546}
   - {fileID: 2141636719}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &540387771
 GameObject:
@@ -2004,7 +2006,7 @@ GameObject:
   - component: {fileID: 605688906}
   m_Layer: 0
   m_Name: NormalZombie (4)
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2140,6 +2142,7 @@ MonoBehaviour:
   currentHP: 100
   team:
   - Untagged
+  - Zombie
   target: {fileID: 0}
 --- !u!54 &605688908
 Rigidbody:
@@ -2252,7 +2255,7 @@ GameObject:
   - component: {fileID: 628672209}
   m_Layer: 0
   m_Name: NormalZombie (6)
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2388,6 +2391,7 @@ MonoBehaviour:
   currentHP: 100
   team:
   - Untagged
+  - Zombie
   target: {fileID: 0}
 --- !u!54 &628672211
 Rigidbody:
@@ -3595,7 +3599,16 @@ MonoBehaviour:
     displayGraphic: {fileID: 387227345}
     gunpoint: {fileID: 387227346}
     range: 30
-  selectedWep: 0
+  - wepName: Doom
+    damage: 10000
+    RPS: 10
+    currentCD: 0
+    bullet: {fileID: 4721706458990693576, guid: 4269fd2cfe196944199ee1395a63956f,
+      type: 3}
+    displayGraphic: {fileID: 1138045193}
+    gunpoint: {fileID: 1138045197}
+    range: 70
+  selectedWep: 2
   weaponKeys: 31000000320000003300000034000000
 --- !u!1 &988869635
 GameObject:
@@ -3614,7 +3627,7 @@ GameObject:
   - component: {fileID: 988869636}
   m_Layer: 0
   m_Name: NormalZombie (3)
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3750,6 +3763,7 @@ MonoBehaviour:
   currentHP: 100
   team:
   - Untagged
+  - Zombie
   target: {fileID: 0}
 --- !u!54 &988869638
 Rigidbody:
@@ -5123,7 +5137,7 @@ GameObject:
   - component: {fileID: 1443051569}
   m_Layer: 0
   m_Name: BigNormalZombie
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5246,6 +5260,7 @@ MonoBehaviour:
   currentHP: 1000
   team:
   - Untagged
+  - Zombie
   target: {fileID: 0}
 --- !u!96 &1443051569
 TrailRenderer:
@@ -5639,7 +5654,7 @@ GameObject:
   - component: {fileID: 1535135518}
   m_Layer: 0
   m_Name: NormalZombie (2)
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5775,6 +5790,7 @@ MonoBehaviour:
   currentHP: 100
   team:
   - Untagged
+  - Zombie
   target: {fileID: 0}
 --- !u!54 &1535135520
 Rigidbody:
@@ -6927,7 +6943,7 @@ GameObject:
   - component: {fileID: 1788323454}
   m_Layer: 0
   m_Name: NormalZombie (5)
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7063,6 +7079,7 @@ MonoBehaviour:
   currentHP: 100
   team:
   - Untagged
+  - Zombie
   target: {fileID: 0}
 --- !u!54 &1788323456
 Rigidbody:
@@ -8083,7 +8100,7 @@ GameObject:
   - component: {fileID: 2019066100}
   m_Layer: 0
   m_Name: NormalZombie (1)
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8219,6 +8236,7 @@ MonoBehaviour:
   currentHP: 100
   team:
   - Untagged
+  - Zombie
   target: {fileID: 0}
 --- !u!54 &2019066102
 Rigidbody:
@@ -8568,12 +8586,12 @@ MonoBehaviour:
     Click to shoot
 
     Press
-    1 or 2 for different weapons
+    1 or 2 or 3 for different weapons
 
     Space to jump
 
-    Cursor to aim (walk fastest
-    in the direction you aim!)'
+    Cursor to aim (walk
+    fastest in the direction you aim!)'
 --- !u!222 &2134816584
 CanvasRenderer:
   m_ObjectHideFlags: 0
